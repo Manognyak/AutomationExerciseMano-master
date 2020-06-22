@@ -40,6 +40,7 @@ namespace Summatix.Automation.Core.Hooks
 		[AfterScenario(Order = 1)]
 		public void AfterScenarioCloseWebDriver()
 		{
+			_webDriver.Manage().Cookies.DeleteAllCookies();
 			DisposeWebDriver();
 		}
 

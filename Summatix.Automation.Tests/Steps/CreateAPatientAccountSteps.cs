@@ -10,5 +10,6 @@ namespace Summatix.Automation.Tests.Steps
 		public CreateAPatientAccountSteps(IWebDriver webDriver, Options options) : base(webDriver, options)
 		{
 		}
+
 	}
 }

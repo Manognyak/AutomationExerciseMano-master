@@ -45,10 +45,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNewHcpPage.cs" />
     <Compile Include="BasePage.cs" />
+    <Compile Include="RegisteredHcpsPage.cs" />
+    <Compile Include="LoginPage.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
@@ -56,6 +58,10 @@
     <ProjectReference Include="..\Summatix.Automation.Configurations\Summatix.Automation.Configurations.csproj">
       <Project>{3A210A39-4028-40BD-8FF6-16A661F1FDBF}</Project>
       <Name>Summatix.Automation.Configurations</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Summatix.Automation.Core\Summatix.Automation.Core.csproj">
+      <Project>{c930e070-d9a6-4009-ae30-e3cc654e9d00}</Project>
+      <Name>Summatix.Automation.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

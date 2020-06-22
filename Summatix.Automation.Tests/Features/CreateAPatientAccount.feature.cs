@@ -63,6 +63,34 @@ namespace Summatix.Automation.Tests.Features
             testRunner.CollectScenarioErrors();
         }
         
+        public virtual void Login(string email, string password, string template, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "Regression"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Login", @__tags);
+#line 8
+this.ScenarioSetup(scenarioInfo);
+#line 9
+testRunner.Given(string.Format("I login to application using \'{0}\' and \'{1}\'", email, password), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line 10
+testRunner.Then(string.Format("I add new hcp using \'{0}\'", template), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [TechTalk.SpecRun.ScenarioAttribute("Login, operations.five@summatix.com", new string[] {
+                "Regression"}, SourceLine=13)]
+        public virtual void Login_Operations_FiveSummatix_Com()
+        {
+#line 8
+this.Login("operations.five@summatix.com", "4uPp0rt#23", "Hcptestdata.xlsx", ((string[])(null)));
+#line hidden
+        }
+        
         [TechTalk.SpecRun.TestRunCleanup()]
         public virtual void TestRunCleanup()
         {
